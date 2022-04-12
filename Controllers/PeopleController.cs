@@ -23,7 +23,7 @@ namespace SwapiMVC.Controllers
 
             var responseString = await response.Content.ReadAsStringAsync();
             var people = JsonSerializer.Deserialize<ResultsViewModel<PeopleViewModel>>(responseString);
-            return View();
+            return View(people);
         }
     }
 }
